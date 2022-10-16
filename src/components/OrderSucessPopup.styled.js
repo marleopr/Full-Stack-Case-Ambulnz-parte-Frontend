@@ -4,10 +4,11 @@ export const ContainerDiv = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    border: solid black;
     transform: translate (-50%, -50%);
     width: auto;
-    background-color: white;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    border-radius: 5px;
     > div{
         position: relative;
         width: 100%;
@@ -24,7 +25,7 @@ export const ContainerDiv = styled.div`
             :hover{
                 cursor: pointer;
                 font-weight: bold;
-                background-color: lightgray;
+                color: #ffffff;
             }
         }
     }

@@ -4,6 +4,7 @@ function CartPageItems(props) {
     const { pizza, removeFromCart } = props
 
     return (
+        <s.EstiloItems>
         <s.ContainerLi>
             <p>
                 Pizza {pizza.name}
@@ -11,9 +12,11 @@ function CartPageItems(props) {
                     'na-US',
                     { style: 'currency', currency: 'USD' }
                 )}
-                {" "} x {pizza.quantity}</p>
-            <button onClick={() => removeFromCart(pizza)} >Remover item</button>
+                {" "} x {pizza.quantity}
+            </p>
+            <s.ButtonRemove onClick={() => removeFromCart(pizza)}>X</s.ButtonRemove>
         </s.ContainerLi>
+        </s.EstiloItems>
     )
 }
 

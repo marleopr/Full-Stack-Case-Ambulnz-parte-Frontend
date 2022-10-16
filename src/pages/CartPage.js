@@ -5,26 +5,31 @@ function CartPage(props) {
     const { cart, removeFromCart, total, confirmOrder } = props
 
     return (
-        <s.ContainerSection>
-            <h1>
-                Carrinho de compras</h1>
-            {cart.map((pizza) => {
-                return (
-                    <CartPageItems
-                        key={pizza.name}
-                        pizza={pizza}
-                        removeFromCart={removeFromCart}
-                    />
-                )
-            })}
+        <s.Main>
+            <s.ContainerSection>
+                <h1>Carrinho de compras</h1>
+                {cart.map((pizza) => {
+                    return (
+                        <s.DentroCarrinho>
+                            <CartPageItems
+                                key={pizza.name}
+                                pizza={pizza}
+                                removeFromCart={removeFromCart}
+                            />
+                        </s.DentroCarrinho>
+                    )
+                })}
 
-            <h2>Total: {total.toLocaleString(
-                'na-us',
-                { style: 'currency', currency: 'USD' }
-            )}
-            </h2>
-            <button onClick={confirmOrder} >Confirmar pedido</button>
-        </s.ContainerSection>
+                <s.TotalConfirma>
+                    <h2>Total: {total.toLocaleString(
+                        'na-us',
+                        { style: 'currency', currency: 'USD' }
+                    )}
+                    </h2>
+                    <s.ButtonPlaceOrder onClick={confirmOrder} >Confirmar pedido</s.ButtonPlaceOrder>
+                </s.TotalConfirma>
+            </s.ContainerSection>
+        </s.Main>
     )
 }
 

@@ -5,9 +5,64 @@ import PizzasMenuPage from "./pages/PizzasMenuPage";
 import axios from "axios"
 import { BASE_URL } from "./constants/BASE_URL";
 import OrderSucessPopup from "./components/OrderSucessPopup";
+import ambLogo from "./assets/img/ambulnzLogo.png"
 
 export const ContainerMain = styled.main`
+  display: grid;
+  grid-template-rows: 1fr 100%;
+  grid-template-columns:  1fr 100%;
+  box-sizing: border-box;
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    
+    display: flex;
+    flex-direction: column;
+        align-items: unset;
+        width: 75vw;
+  }
+`
+
+export const Header = styled.div`
   display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  grid-column: 1/-1;
+  background-color:white;
+  background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+  linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+  background-size:50px 50px;
+  `
+
+export const HeaderImg = styled.img`
+    width: 50vw;
+    height: 45px;
+    display: flex;
+    @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    
+    display: flex;
+    width: 250px;
+    height: 30px;
+  }
+  `
+
+export const Footer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  grid-column: 1/-1;
+  background-color:white;
+  background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+  linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+  background-size:50px 50px;
+`
+export const TextFooter = styled.div`
+    margin-left: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    :hover{
+        cursor: pointer;
+    }
 `
 
 function App() {
@@ -124,7 +179,11 @@ function App() {
   }
 
   return (
+
     <ContainerMain>
+      <Header>
+        <HeaderImg src={ambLogo} />
+      </Header>
       <PizzasMenuPage addToCart={addToCart} />
       <CartPage
         cart={cart}
@@ -137,6 +196,12 @@ function App() {
           order={orderSucessPopupState.summary}
           closePopup={closePopup}
         />}
+      <Footer>
+        <TextFooter>
+          <a href="https://github.com/marleopr" target="_blank" rel="noopener noreferrer">© 2022 by Márleo Piber</a>
+        </TextFooter>
+      </Footer>
+
     </ContainerMain>
   );
 }

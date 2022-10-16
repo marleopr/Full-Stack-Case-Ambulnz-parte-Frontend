@@ -1,26 +1,50 @@
 import * as s from "./PizzaCard.styled"
 
-function PizzaCard(props) {
-    const { pizza, addToCart } = props
+import imgmargherita from '../assets/img/margherita.jpg'
+import imgbufala from '../assets/img/bufala.jpg'
+import imgdiavola from '../assets/img/diavola.jpg'
+import imgbianca from '../assets/img/bianca.jpg'
+import imgromana from '../assets/img/romana.jpg'
 
+function PizzaCard(props) {
+    const { pizza, addToCart, pizzaName } = props
+
+    const pizzaImagens = (pizzaName) => {
+        if (pizzaName === 'Bufala') {
+            return imgbufala
+        } if (pizzaName === 'Diavola') {
+            return imgdiavola
+        } if (pizzaName === 'Margherita') {
+            return imgmargherita
+        } if (pizzaName === 'Pizza Bianca') {
+            return imgbianca
+        } if (pizzaName === 'Romana') {
+            return imgromana
+        }
+    }
+
+    console.log("console log",pizzaName)
     return (
-        <s.ContainerLi>
-            <h3>{pizza.name}</h3>
-            <p className="card-price">
-                {pizza.price.toLocaleString(
-                    'na-us',
-                    { style: 'currency', currency: 'USD' }
-                )}
-            </p>
-            <p>
-                {pizza.ingredients.map((item) => {
-                    return (
-                        <span key={item}>{`${item} `}</span>
-                    )
-                })}
-            </p>
-            <button onClick={() => addToCart(pizza)}>Adicionar no carrinho</button>
-        </s.ContainerLi>
+        <s.Main>
+            <s.ContainerLi>
+                <h3>{pizza.name}</h3>
+                <s.ImagemPizza src={pizzaImagens(pizzaName)}/>
+                <p className="card-price">
+                    {pizza.price.toLocaleString(
+                        'na-us',
+                        { style: 'currency', currency: 'USD' }
+                    )}
+                </p>
+                <p>
+                    {pizza.ingredients.map((item) => {
+                        return (
+                            <span key={item}>{`${item} `}</span>
+                        )
+                    })}
+                </p>
+                <s.ButtonAdd onClick={() => addToCart(pizza)}>Adicionar</s.ButtonAdd>
+            </s.ContainerLi>
+        </s.Main>
     )
 }
 
