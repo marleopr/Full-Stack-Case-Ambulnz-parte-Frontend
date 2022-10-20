@@ -1,5 +1,5 @@
 import * as s from "./CartPage.styled"
-import CartPageItems from "./CartPageItems"
+import CartPageItems from "../cartPageItems/CartPageItems"
 
 function CartPage(props) {
     const { cart, removeFromCart, total, confirmOrder } = props

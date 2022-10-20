@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import PizzaCard from "../components/PizzaCard"
-import { BASE_URL } from "../constants/BASE_URL"
+import PizzaCard from "../../components/pizzaCard/PizzaCard"
+import { BASE_URL } from "../../constants/BASE_URL"
 import * as s from "./PizzaMenuPage.styled"
 
 function PizzasMenuPage(props) {

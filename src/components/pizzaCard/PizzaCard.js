@@ -1,10 +1,10 @@
 import * as s from "./PizzaCard.styled"
 
-import imgmargherita from '../assets/img/margherita.jpg'
-import imgbufala from '../assets/img/bufala.jpg'
-import imgdiavola from '../assets/img/diavola.jpg'
-import imgbianca from '../assets/img/bianca.jpg'
-import imgromana from '../assets/img/romana.jpg'
+import imgmargherita from '../../assets/img/margherita.jpg'
+import imgbufala from '../../assets/img/bufala.jpg'
+import imgdiavola from '../../assets/img/diavola.jpg'
+import imgbianca from '../../assets/img/bianca.jpg'
+import imgromana from '../../assets/img/romana.jpg'
 
 function PizzaCard(props) {
     const { pizza, addToCart, pizzaName } = props
