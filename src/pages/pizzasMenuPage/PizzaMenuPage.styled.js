@@ -5,8 +5,22 @@ export const Main = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  
+  
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        overflow: auto;
+        margin: 0;
+        padding: 0;
+        background-color: aliceblue;
 
+  }
   `
+
 export const ContainerSection = styled.section`
     display: flex;
     flex-direction: column;
@@ -15,4 +29,13 @@ export const ContainerSection = styled.section`
     ul{
         display: flex;
     }
+
+    @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+  }
 `

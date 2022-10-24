@@ -13,6 +13,8 @@ export const ContainerMain = styled.main`
   grid-template-rows: 1fr 100%;
   grid-template-columns:  1fr 100%;
   box-sizing: border-box;
+  background-color: #f1f1f1;
+
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     
     display: flex;

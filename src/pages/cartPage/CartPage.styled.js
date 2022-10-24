@@ -7,14 +7,21 @@ export const Main = styled.main`
     align-items: center;
     max-width: 30vw;
     background-color: #ffffff;
+    @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+        display: flex;
+        flex-direction: row;
+        max-width: 100vw;        
+        width: 100vw;
+        padding-bottom: 30px;
+  }
 `
 
 export const DentroCarrinho = styled.div`
     display: flex;
     justify-content: space-between;
      width: 90%;
-    background: rgb(255,100,137);
-    background: linear-gradient(90deg, rgba(255,100,137,1) 0%, rgba(249,178,78,1) 100%);
+    background: #0062ff;
+    background: linear-gradient(90deg, #006effff 0%, #0766c5ff 100%);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19);
 `
 
@@ -24,6 +31,8 @@ export const ContainerSection = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+
     h1{
         font-size: 1.5em;
         text-align: center;
@@ -38,11 +47,8 @@ export const TotalConfirma = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #ffffff;
-    h2{
-    text-shadow: -1px 0 black, 0 1px black,      
-    1px 0 black, 0 -1px black;
-    }
+    color: #000000;
+    align-items: center;
 `
 
 export const ButtonPlaceOrder = styled.div`
@@ -58,7 +64,7 @@ export const ButtonPlaceOrder = styled.div`
   text-align: center;
   text-decoration:none;
   border-radius:6px;
-  background-color:#ff9900;
+  background-color:#0071cd;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
@@ -73,7 +79,7 @@ export const ButtonPlaceOrder = styled.div`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   @media screen and (max-device-width : 480px){
-    width: 150px;
+    width: 220px;
     height: 30px;
     margin: 10px 0 10px 0;
   } 
