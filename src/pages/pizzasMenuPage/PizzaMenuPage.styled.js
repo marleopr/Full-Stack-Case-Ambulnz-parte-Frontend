@@ -5,8 +5,6 @@ export const Main = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
-  
   
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
         display: flex;
