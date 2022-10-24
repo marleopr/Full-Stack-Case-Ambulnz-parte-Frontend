@@ -6,8 +6,8 @@ export const Main = styled.li`
     row-gap: 10px;
     column-gap: 10px;
     margin: 5px 5px 5px 5px;
-    background-color: #FFE53B;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    background-color: #ffffff;
+    margin-top: 150px;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19);
     border-radius: 5px;
 
@@ -23,23 +23,44 @@ export const ContainerLi = styled.li`
     margin: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    
+
+    h2,
+    .card-price {
+        text-align: center;
+        color: #000000;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        letter-spacing: 3px;
+        padding: 5px;
+    }
 
     h3,
     .card-price {
         text-align: center;
-        color: #ffffff;
-        text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black;
-      letter-spacing: 3px;
+        color: #000000;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        letter-spacing: 3px;
     }
+
     p{
-        color: white;
+        color: #000000;
         padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+`
+export const Ingredientes = styled.div`
+        color: #000000;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: solid blue; */
+        width: 100px;
+        height: 150px;
 `
 
 export const ImagemPizza = styled.img`
@@ -64,7 +85,7 @@ export const ButtonAdd = styled.div`
   text-align: center;
   text-decoration:none;
   border-radius:6px;
-  background-color:#ff9900;
+  background-color:#0071cd;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;

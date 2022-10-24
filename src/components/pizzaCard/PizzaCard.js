@@ -29,19 +29,19 @@ function PizzaCard(props) {
             <s.ContainerLi>
                 <h3>{pizza.name}</h3>
                 <s.ImagemPizza src={pizzaImagens(pizzaName)}/>
-                <p className="card-price">
+                <h2 className="card-price">
                     {pizza.price.toLocaleString(
                         'na-us',
                         { style: 'currency', currency: 'USD' }
                     )}
-                </p>
-                <p>
+                </h2>
+                <s.Ingredientes>
                     {pizza.ingredients.map((item) => {
                         return (
                             <span key={item}>{`${item} `}</span>
                         )
                     })}
-                </p>
+                </s.Ingredientes>
                 <s.ButtonAdd onClick={() => addToCart(pizza)}>Adicionar</s.ButtonAdd>
             </s.ContainerLi>
         </s.Main>
