@@ -19,24 +19,23 @@ function PizzasMenuPage(props) {
             })
     }, [])
 
-    console.log("pizzas" ,pizzas)
     return (
         <s.Main>
-        <s.ContainerSection>
-            <ul>
-                {pizzas.map((pizza) => {
+            <s.ContainerSection>
+                <ul>
+                    {pizzas.map((pizza) => {
 
-                    return (
-                        <PizzaCard
-                            key={pizza.name}
-                            pizza={pizza}
-                            addToCart={addToCart}
-                            pizzaName = {pizza.name}
-                        />
-                    )
-                })}
-            </ul>
-        </s.ContainerSection>
+                        return (
+                            <PizzaCard
+                                key={pizza.name}
+                                pizza={pizza}
+                                addToCart={addToCart}
+                                pizzaName={pizza.name}
+                            />
+                        )
+                    })}
+                </ul>
+            </s.ContainerSection>
         </s.Main>
     )
 }

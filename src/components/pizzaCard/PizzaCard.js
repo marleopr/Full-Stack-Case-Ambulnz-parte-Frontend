@@ -23,12 +23,11 @@ function PizzaCard(props) {
         }
     }
 
-    console.log("console log",pizzaName)
     return (
         <s.Main>
             <s.ContainerLi>
                 <h3>{pizza.name}</h3>
-                <s.ImagemPizza src={pizzaImagens(pizzaName)}/>
+                <s.ImagemPizza src={pizzaImagens(pizzaName)} />
                 <h2 className="card-price">
                     {pizza.price.toLocaleString(
                         'na-us',
