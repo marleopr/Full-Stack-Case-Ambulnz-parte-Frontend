@@ -15,7 +15,6 @@ export const Main = styled.div`
         margin: 0;
         padding: 0;
         background-color: aliceblue;
-
   }
   `
 
@@ -23,7 +22,6 @@ export const ContainerSection = styled.section`
     display: flex;
     flex-direction: column;
     width: 70vw;
-    
     ul{
         display: flex;
     }

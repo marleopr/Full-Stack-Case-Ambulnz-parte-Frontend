@@ -8,6 +8,10 @@ import OrderSucessPopup from "./components/orderSucessPopup/OrderSucessPopup";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
 
+// Easter egg
+function showHiringMessage() { try { window.console.log("\n%cOl\u00e1!\n%cProjeto com deploy frontend e backend no AWS\n\n%cPara fins didáticos, este projeto foi deploiado totalmente pela EC2 (Amazon Elastic Compute Cloud), os links estão disponíveis no README deste projeto em meu Github.\n%chttps://github.com/marleopr\n", "font-family: serif; font-size: 32px; color: #767676", "font-family: serif; font-size: 25px; color: rgb(144, 39, 176); font-weight: bold;", "font-family: sans-serif; font-size: 16px; line-height: 1.2rem; color: #767676", "font-family: sans-serif; font-size: 11px; text-decoration: underline; line-height: 1.2rem; color: #767676") } catch (a) { } }
+showHiringMessage();
+
 export const ContainerMain = styled.main`
   display: grid;
   grid-template-rows: 1fr 100%;
@@ -104,12 +108,10 @@ function App() {
     setTotal(total)
   }
 
-
   const confirmOrder = async () => {
     try {
       const body = {
         pizzas: cart
-
       }
 
       const res = await axios.post(`${BASE_URL}/orders`, body)
